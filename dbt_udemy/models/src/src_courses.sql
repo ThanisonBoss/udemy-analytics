@@ -1,0 +1,30 @@
+WITH RAW_COURSE AS
+	(SELECT *
+		FROM {{ ref('raw_course') }})
+SELECT ID,
+	   TITLE,
+	   URL,
+	   IS_PAID,
+	   REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(VISIBLE_INSTRUCTORS, '\', ''), 'None', '''None'''), '", ''', ''', '''), ''': "', ''': '''), '"', ''), '{''', '{"'), ''': ', '": '), ': ''', ': "'), ''',' , '",'), ', ''', ', "'), '''}', '"}'), 'r, "', 'r, '''), 'Arts"', 'Arts'''), ''', "', '", "'), '",",', ''',",'), 'book, "', 'book, '''), ': '',"', ': "None"')::jsonb AS VISIBLE_INSTRUCTORS,
+	   IMAGE_240x135 AS img_url,
+	   IS_PRACTICE_TEST_COURSE,
+	   HEADLINE,
+	   NUM_SUBSCRIBERS,
+	   CAPTION_LOCALES,
+	   AVG_RATING,
+	   NUM_REVIEWS,
+	   NUM_PUBLISHED_LECTURES,
+	   NUM_PUBLISHED_PRACTICE_TESTS,
+	   LOCALE,
+	   HAS_CLOSED_CAPTION,
+	   CAPTION_LANGUAGES,
+	   CREATED,
+	   INSTRUCTIONAL_LEVEL,
+	   CONTENT_LENGTH_PRACTICE_TEST_QUESTIONS,
+	   PUBLISHED_TIME,
+	   CONTENT_INFO_SHORT,
+	   BADGES,
+	   CATEGORY_NAME,
+	   SUBCATEGORY_ID,
+	   SUBCATEGORY_NAME
+FROM RAW_COURSE

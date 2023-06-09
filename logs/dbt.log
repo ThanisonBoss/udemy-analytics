@@ -1,0 +1,26 @@
+
+
+============================== 2023-04-28 02:53:15.583115 | 5ec327cb-d240-4a5a-a2a8-eb28f7af5bc3 ==============================
+[0m02:53:15.583115 [info ] [MainThread]: Running with dbt=1.4.6
+[0m02:53:15.583829 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/bossthanison/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'project_name': 'dbt_udemy', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m02:53:15.583932 [debug] [MainThread]: Tracking: tracking
+[0m02:53:15.594096 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108397040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108369850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108387c40>]}
+[0m02:53:15.595757 [debug] [MainThread]: Starter project path: /Users/bossthanison/Documents/Portfoilio/project/udemy-analytics/.venv/lib/python3.9/site-packages/dbt/include/starter_project
+[0m02:53:18.437524 [info ] [MainThread]: 
+Your new dbt project "dbt_udemy" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m02:53:18.437910 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10837fa30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1083976d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1083976a0>]}
+[0m02:53:18.438153 [debug] [MainThread]: Flushing usage events

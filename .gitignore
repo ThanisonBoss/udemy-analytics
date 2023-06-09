@@ -1,0 +1,3 @@
+.venv/
+dbt_udemy/seeds/raw_course.csv
+dbt_udemy/seeds/raw_price.csv

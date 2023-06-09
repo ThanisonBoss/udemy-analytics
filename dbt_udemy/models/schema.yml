@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: dim_instructors
+    columns:
+      - name: instructor_id_pk
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_date
+    columns:
+      - name: date_pk
+        tests:
+          - unique
+          - not_null
+  
+  - name: dim_courses
+    columns:
+      - name: course_id_pk
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_courses
+    columns:
+      - name: course_id_fk
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_courses')
+              field: course_id_pk
+
+      - name: instructor_id_fk
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_instructors')
+              field: instructor_id_pk      
+
+      - name: created_date_fk
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_pk  
